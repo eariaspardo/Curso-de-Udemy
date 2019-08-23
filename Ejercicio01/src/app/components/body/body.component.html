@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col">
+        <h1>*ngIf</h1>
+        <div *ngIf="mostrar" class="card text-white bg-dark mb-3" style="width:100;%">
+            <div class="card-header">Card</div>
+            <div class="card-body">
+                <h5 class="card-title">{{frase.autor}}</h5>
+                <p class="card-text">{{frase.mensaje}}</p>
+            </div>
+        </div>
+        <button (click)="mostrar = !mostrar" class="btn btn-outline-dark btn-block">
+            Mostrar/Ocultar
+        </button>
+    </div>
+
+    <div class="col">
+        <h1>*ngFor</h1>
+        <ul class="list-group" style="width:100%;">
+            <li *ngFor="let personaje of personajes;let i=index" class="list-group-item">
+                {{i+1}}. {{personaje}}
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <label class="checkbox-label" for="articleTypes-FLA">
+        <input type="checkbox" id="articleTypes-FLA" name="Research articles"
+            class="checkbox-input checkbox-small checkbox-label-indent">
+            <span class="checkbox-check checkbox-small checkbox-label-indent"></span>
+            <span class="checkbox-label-value checkbox-small checkbox-label-indent">Prueba de checkbox</span>
+    </label>
+</div>
